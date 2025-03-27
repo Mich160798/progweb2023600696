@@ -1,0 +1,13 @@
+<<body>
+    <script> 
+    let palabra = "murciélago";
+    let vocales = palabra.match(/[aeiouáéíóú]/gi)?.length || 0;
+    let consonantes = palabra.match(/[^aeiouáéíóú]/gi)?.length || 0;
+    
+    let idiomaEFE = palabra.replace(/([aeiouáéíóú])/gi, "$1f$1");
+    
+    document.write("Número de vocales: " + vocales + "<br>");
+    document.write("Número de consonantes: " + consonantes + "<br>");
+    document.write("Palabra en idioma de la EFE: " + idiomaEFE + "<br>");
+    </script>
+    </body>

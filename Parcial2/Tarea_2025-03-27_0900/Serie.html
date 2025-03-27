@@ -1,0 +1,50 @@
+<body>
+    <script>
+        let serie = [];
+        for (let i = 2; i <= 400; i += 2) {
+            serie.push(i);
+        }
+
+        document.write("Serie: " + serie.join(", ") + "<br>");
+    
+        let suma = serie.reduce((acc, num) => acc + num, 0);
+        let promedio = suma / serie.length;
+    
+        let moda = 2;
+    
+        let mediana = serie[Math.floor(serie.length / 2)];
+    
+        document.write("Promedio: " + promedio + "<br>");
+        document.write("Moda: " + moda + "<br>");
+        document.write("Mediana: " + mediana + "<br>");
+    </script>
+    </body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
