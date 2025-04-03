@@ -1,0 +1,45 @@
+<html>
+<head>
+    <script>
+        function btn_click() {
+            var arreglo = ["Hola", 5, true, " Michel", 6, false, "!!!", 3, true];
+            var suma = 0;
+            var concatenacion = "";
+            var andBooleanos = true;
+
+            arreglo.forEach(function(elemento) {
+                if (typeof elemento == "number") {
+                    suma = suma + elemento;
+                } else if (typeof elemento == "string") {
+                    concatenacion = concatenacion + elemento;
+                } else if (typeof elemento == "boolean") {
+                    andBooleanos = andBooleanos && elemento;
+                }
+            });
+
+            document.getElementById("suma").value = suma;
+            document.getElementById("concatenacion").value = concatenacion;
+            document.getElementById("andBooleanos").value = andBooleanos;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label>Suma:</label></td>
+            <td><input id="suma" readonly></td>
+        </tr>
+        <tr>
+            <td><label>Concatenación:</label></td>
+            <td><input id="concatenacion" readonly></td>
+        </tr>
+        <tr>
+            <td><label>AND Booleanos:</label></td>
+            <td><input id="andBooleanos" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="btn_click()">Calcular</button></td>
+        </tr>
+    </table>
+</body>
+</html>
